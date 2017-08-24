@@ -1,9 +1,5 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% nome = "Alan Tavares de Melo"%>
+<h1><%= t('hello')%>  <%= "Nome: #{nome}" %> <%= l Date.today %> <%= l Time.now %></h1>
 
-<ul>
-    <il><%= link_to 'Telefones', phones_path%></il>
-    <il><%= link_to 'Contatos', contacts_path%></il>
-    <il><%= link_to 'Tipos', kinds_path%></il>
-    <il><%= link_to 'Endereço', addresses_path%></il>
-</ul>
+
+

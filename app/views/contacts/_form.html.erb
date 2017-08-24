@@ -11,7 +11,7 @@
     </div>
   <% end %>
   
-  <h1>New Contact</h1>
+  <h1><%= t('buttons.new_contact')%></h1>
 
   <div class="field">
     <%= form.label :name %>
@@ -25,16 +25,44 @@
 
   <div class="field">
     <%= form.label :kind_id%>
-    <%=collection_select(:contact, :kind_id, @options_for_kinds, :id, :description)%>
+    <%=form.collection_select( :kind_id, @options_for_kinds, :id, :description)%>
   </div>
+  
+  <%= form.fields_for :address do |address_fields| %>
+  <div class="field">
+    <%= address_fields.label :street%>
+    <%= address_fields.text_field :street %>
+  </div>
+  <div class="field">
+    <%= address_fields.label :city%>
+    <%= address_fields.text_field :city %>
+  </div>
+  
+  <div class="field">
+    <%= address_fields.label :state%>
+   <%= address_fields.select :state, options_for_states(@contact.address.state)%>
+  </div>
+        
+  <% end %>
+  
 
   <div class="field">
     <%= form.label :rmk %>
     <%= form.text_area :rmk, id: :contact_rmk %>
   </div>
+  
+  
+  <%= form.fields_for :phones do |phones_fields| %>
+  <div class="field">
+    <%= phones_fields.label :phone%>
+    <%= phones_fields.text_field :phone %>
+  </div>
+  <% end %>
 
   <div class="actions">
     <%= form.submit "Create Contact", class:"button" %>
     <%= link_to 'Back', contacts_path, class:"button"  %>
   </div>
+  
+   
 <% end %>
