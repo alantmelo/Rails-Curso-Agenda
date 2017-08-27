@@ -2,7 +2,7 @@ namespace :utils do
   desc "Popular o banco de dados com valores falsos"
   task seed: :environment do
     puts "Cadastrando 5 contatos"
-    5.times do |i|
+    100.times do |i|
         Contact.create name: Faker::Name.name,
         email: Faker::Internet.email,
         kind: Kind.all.sample, rmk: Faker::Lorem.paragraphs(1)

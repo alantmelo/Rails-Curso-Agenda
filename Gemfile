@@ -23,6 +23,9 @@ gem 'lerolero_generator'
 #cocoon
 gem "cocoon"
 gem 'jquery-rails'
+
+#Adding pagination to our project
+gem 'kaminari'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 # gem faker
