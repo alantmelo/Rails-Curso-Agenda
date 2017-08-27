@@ -20,6 +20,9 @@ gem 'rails-i18n', '~> 5.0.0' # For 5.0.x and 5.1.x
 gem 'uglifier', '>= 1.3.0'
 #Cria textos
 gem 'lerolero_generator'
+#cocoon
+gem "cocoon"
+gem 'jquery-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 # gem faker

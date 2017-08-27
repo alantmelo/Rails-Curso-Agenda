@@ -4,6 +4,9 @@
       contact: 
         one: "Contato"
         other: "Contatos"
+      kind: 
+        one: "Tipo"
+        other: "Tipos"
       address: 
         one: "Endereço"
         other: "Endereços"
@@ -24,5 +27,7 @@
         contact_id: "Tipo de Contato"
       phone:
         phone: "Telefone"
+      kind:
+        description: "Descrição"
     
     
